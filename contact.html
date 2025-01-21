@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="how.html">How It Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
+          
+                <li><a href="signup.html" class="signup-button">login/Sign Up</a></l1>
+            </ul>
+        </nav>
+    </header>
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <p>Have questions? Feel free to reach out to us through the form below.</p>
+    
+        <form class="contact-form" id="contactForm">
+            <input type="text" placeholder="Your Name" id="name" required>
+            <input type="email" placeholder="Your Email" id="email" required>
+            <textarea placeholder="Your Message" rows="5" id="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    
+        <div class="success-message hidden" id="successMessage">
+            <p>Your message has been sent successfully. We'll get back to you soon!</p>
+        </div>
+    </div>
+    
+    <script src="contact.js"></script>
+</body>
+</html>

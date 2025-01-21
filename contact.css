@@ -1,0 +1,205 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Contact Section */
+.contact-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth shadow and transform transition */
+}
+
+.contact-container:hover {
+    transform: translateY(-5px); /* Subtle lifting effect */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Header */
+.contact-container h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #3a3a3a;
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.contact-container h2:hover {
+    color: #5cb85c; /* Change color on hover */
+}
+
+.contact-container p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #777;
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.contact-container p:hover {
+    color: #555; /* Change color on hover */
+}
+
+/* Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+.contact-form:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Input Fields */
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for border and shadow */
+}
+
+/* Focus Effect on Inputs */
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #5cb85c;
+    box-shadow: 0 0 8px rgba(92, 184, 92, 0.5);
+}
+
+/* Button */
+.contact-form button {
+    padding: 14px;
+    background-color: #5cb85c;
+    color: #fff;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth background and scale transition */
+}
+
+.contact-form button:hover {
+    background-color: #4cae4c;
+    transform: translateY(-5px); /* Subtle lift effect */
+}
+
+/* Success Message */
+.success-message {
+    display: none;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #dff0d8;
+    border: 1px solid #d0e9c6;
+    color: #3c763d;
+    font-size: 1.1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease; /* Smooth fade-in transition */
+}
+
+/* Show Success Message */
+.success-message p {
+    margin: 0;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Header Styles */
+header {
+    background-color: #272626;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+header:hover {
+    background-color: #333; /* Darken the header on hover */
+}
+
+header .tagline {
+    font-size: 1.2em;
+    margin-top: 10px;
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
+}
+
+header .tagline:hover {
+    opacity: 0.8; /* Slightly fade tagline on hover */
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+nav ul:hover {
+    background-color: #444; /* Change background color on hover */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth background and scale transition */
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .contact-container {
+        padding: 20px;
+    }
+
+    .contact-form {
+        padding: 15px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 1em;
+    }
+
+    .cta a {
+        padding: 12px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-container {
+        padding: 10px;
+    }
+
+    .cta a {
+        padding: 10px 18px;
+    }
+}

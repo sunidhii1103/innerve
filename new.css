@@ -1,0 +1,398 @@
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef9f4;
+    color: #333;
+    line-height: 1.6;
+    padding-left: 1%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #2f2f2f;
+    color: #f4f7fc;
+}
+
+body.dark-mode .container,
+body.dark-mode .dashboard {
+    background-color: #3e3e3e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-out;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2 {
+    color: #ffcc00;
+}
+
+body.dark-mode label {
+    color: #fff;
+}
+
+body.dark-mode input, 
+body.dark-mode select, 
+body.dark-mode textarea {
+    background-color: #555;
+    border: 1px solid #666;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode button {
+    background-color: #ffcc00;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode button:hover {
+    background-color: #f2b500;
+}
+
+body.dark-mode #resources {
+    background-color: #444;
+}
+
+body.dark-mode #resources a {
+    color: #ffcc00;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode #resources a:hover {
+    text-decoration: underline;
+}
+
+body.dark-mode #chatbot {
+    background-color: #444;
+    transition: background-color 0.3s ease-in-out;
+}
+
+body.dark-mode #chatInput {
+    background-color: #555;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode #chatResponse {
+    background-color: #666;
+    color: #fff;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 10vh;
+}
+
+header, footer {
+    background-color: #444;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #555;
+    margin: 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #666;
+    transform: scale(1.05);
+}
+
+/* Main Content */
+main {
+    padding: 1rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, textarea {
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    width: 100%;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+input[type="number"] {
+    width: 48%;
+    display: inline-block;
+    margin-right: 4%;
+}
+
+input[type="text"] {
+    width: 100%;
+}
+
+select {
+    width: 100%;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #ffcc00;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.6);
+    transform: scale(1.05);
+}
+
+/* Buttons */
+button {
+    width: 45%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px 5%;
+    margin-left: 30%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+button:hover {
+    background-color: #388e3c;
+    transform: translateY(-2px);
+}
+
+button#resetButton {
+    background-color: #f44336;
+}
+
+button#resetButton:hover {
+    background-color: #d32f2f;
+}
+
+/* Loading */
+#loading {
+    text-align: center;
+    font-size: 18px;
+    color: #4caf50;
+    visibility: hidden;
+}
+
+/* Mental Health Resources */
+#resources {
+    background-color: #e6f7ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+#resources ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#resources ul li {
+    margin-bottom: 10px;
+}
+
+#resources ul li a {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#resources ul li a:hover {
+    text-decoration: underline;
+    color: #2e7bb6;
+}
+
+/* Prediction Result */
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e8f5e9;
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+#result h2 {
+    font-size: 1.8em;
+    color: #4a90e2;
+}
+
+#solutions, 
+#copingStrategies {
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Chatbot Styling */
+.chatbot {
+    background-color: #f1f7fc;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    max-height: 500px;
+    min-height: 300px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+#chatInput {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+#chatResponse {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e6f7ff;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+/* Dark Mode Switch Styling */
+.dark-mode-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.switch-label {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    background-color: #929090;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.switch-label::after {
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:checked + .switch-label {
+    background-color: #333;
+}
+
+input[type="checkbox"]:checked + .switch-label::after {
+    left: 27px;
+}
+
+/* Social Media Styling */
+body.social {
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+

@@ -1,0 +1,341 @@
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef9f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #2f2f2f;
+    color: #f4f7fc;
+}
+
+body.dark-mode .container {
+    background-color: #3e3e3e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #ffcc00;
+}
+
+body.dark-mode label {
+    color: #fff;
+}
+
+body.dark-mode input, body.dark-mode select, body.dark-mode textarea {
+    background-color: #555;
+    border: 1px solid #666;
+    color: #fff;
+}
+
+body.dark-mode button {
+    background-color: #ffcc00;
+    color: #333;
+}
+
+body.dark-mode button:hover {
+    background-color: #f2b500;
+}
+
+body.dark-mode #resources {
+    background-color: #444;
+}
+
+body.dark-mode #resources a {
+    color: #ffcc00;
+}
+
+body.dark-mode #resources a:hover {
+    text-decoration: underline;
+}
+
+body.dark-mode #chatbot {
+    background-color: #444;
+}
+
+body.dark-mode #chatInput {
+    background-color: #555;
+    color: #fff;
+}
+
+body.dark-mode #chatResponse {
+    background-color: #666;
+    color: #fff;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #0a61c4;
+}
+
+h2 {
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+input[type="number"] {
+    width: 48%;
+    display: inline-block;
+    margin-right: 4%;
+}
+
+input[type="text"] {
+    width: 100%;
+}
+
+select {
+    width: 100%;
+}
+
+/* Buttons */
+button {
+    width: 45%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px 5%;
+    margin-left:30%;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+button#resetButton {
+    background-color: #f44336;
+}
+
+button#resetButton:hover {
+    background-color: #d32f2f;
+}
+
+/* Loading */
+#loading {
+    text-align: center;
+    font-size: 18px;
+    color: #4caf50;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Progress Bar */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #f1f1f1;
+    border-radius: 12px;
+    z-index: 1000;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: #0a61c4;
+    border-radius: 12px;
+}
+
+
+body {
+    padding-top: 40px; /* Increase padding to accommodate the progress bar */
+}
+
+
+/* Mental Health Resources */
+#resources {
+    background-color: #e6f7ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+#resources ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#resources ul li {
+    margin-bottom: 10px;
+}
+
+#resources ul li a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+#resources ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Prediction Result */
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e8f5e9;
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+}
+
+#result h2 {
+    font-size: 1.8em;
+    color: #4a90e2;
+}
+
+#solutions, #copingStrategies {
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Chatbot Styling */
+.chatbot {
+    background-color: #f1f7fc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+#chatInput {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+#chatResponse {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e6f7ff;
+    border-radius: 6px;
+}
+
+/* Toggle Dark Mode */
+#toggleDarkMode {
+    padding: 12px 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+#toggleDarkMode:hover {
+    background-color: #555;
+}
+
+
+
+
+
+
+
+
+
+/* Dark Mode Switch Styling */
+.dark-mode-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.switch-label {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+.switch-label::after {
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:checked + .switch-label {
+    background-color: #333;
+}
+
+input[type="checkbox"]:checked + .switch-label::after {
+    left: 27px;
+}
+
