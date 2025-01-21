@@ -379,6 +379,19 @@ body.social {
         width: 100%;
         margin-right: 0;
     }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 0.5rem 1rem;
+    }
 }
 
 /* Animations */
@@ -392,7 +405,6 @@ body.social {
         transform: translateY(0);
     }
 }
-
 
 
 
