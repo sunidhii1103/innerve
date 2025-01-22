@@ -367,6 +367,22 @@ body.social {
 @media (max-width: 768px) {
     .container {
         padding: 20px;
+        overflow: hidden;
+    }
+
+    form {
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    input, select, textarea {
+        width: 100%;
+    }
+
+    input[type="number"],
+    input[type="text"] {
+        width: 100%;
+        margin-right: 0;
     }
 
     button {
@@ -375,22 +391,22 @@ body.social {
         margin-bottom: 15px;
     }
 
-    input[type="number"] {
-        width: 100%;
-        margin-right: 0;
-    }
-
     nav ul {
-        flex-direction: column;
-        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: space-between;
     }
 
     nav ul li {
-        width: 100%;
+        flex: 1 0 auto;
+        text-align: center;
     }
 
     nav ul li a {
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 0.5rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -405,6 +421,3 @@ body.social {
         transform: translateY(0);
     }
 }
-
-
-
